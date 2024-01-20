@@ -19,8 +19,10 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 api_urlpatterns = [
-    path('accounts/', include('rest_registration.api.urls')),
-    path('recommendation/<int:user_id>/', include('recommendation.urls')),
+    path('user/', include('rest_registration.api.urls')),
+    path("user/userinfo/<str:username>/", include("accounts.urls")),
+
+    # path("recommendation/<int:user_id>/", include('recommendation.urls')),
 ]
 
 urlpatterns = [
@@ -30,5 +32,5 @@ urlpatterns = [
     path("api/schema/redoc/", SpectacularRedocView.as_view(
         url_name="schema"), name="redoc",),
     path("api/schema/swagger-ui/", SpectacularSwaggerView.as_view(
-        url_name="schema"), name="swagger-ui"),  # new
+        url_name="schema"), name="swagger-ui"),
 ]

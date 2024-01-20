@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import recommend_tours
+from .views import RecommendTours
 
 urlpatterns = [
-    path('', recommend_tours, name='recommend_tours'),
+    path("", RecommendTours.as_view()),
 ]

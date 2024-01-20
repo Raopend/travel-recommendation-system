@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from recommendation.models import Tours
+from .models import Tours
 
 
 class ToursSerializer(serializers.ModelSerializer):
