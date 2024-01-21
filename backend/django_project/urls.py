@@ -22,7 +22,7 @@ api_urlpatterns = [
     path('user/', include('rest_registration.api.urls')),
     path("user/userinfo/<str:username>/", include("accounts.urls")),
 
-    # path("recommendation/<int:user_id>/", include('recommendation.urls')),
+    path("recommendation/<int:user_id>/", include('recommendation.urls')),
 ]
 
 urlpatterns = [

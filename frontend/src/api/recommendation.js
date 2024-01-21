@@ -1,10 +1,11 @@
 import request from '@/utils/request'
 
 const recommendationRequest = {
-    getRecommendedLandscapesByUserId: (pid) => {
+    getRecommendedLandscapesByUserId: (id) => {
         return request({
-            url: `/api/recommendation${pid}`,
+            url: `/api/recommendation/${id}/`,
             method: 'get',
         })
     },
 }
+export default recommendationRequest
