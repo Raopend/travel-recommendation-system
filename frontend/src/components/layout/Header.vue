@@ -117,7 +117,7 @@ emitter.on('handleHeaderAvatarChange', data => {
 
         <div class="big-menu">
             <el-link @click="show('home')" :underline="false">首页</el-link>
-            <el-link @click="show('dashboard')" :underline="false">大数据统计</el-link>
+<!--            <el-link @click="show('dashboard')" :underline="false">大数据统计</el-link>-->
             <el-link @click="show('recommend')" :underline="false">猜你喜欢</el-link>
         </div>
 
